@@ -1,0 +1,166 @@
+<!DOCTYPE HTML >
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href="normalize.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ultra">
+  <title>lesson</title>
+    <style type="text/css">
+
+  /* main manu style */
+
+		  * {
+		  	margin: 0;
+		 padding: 0;
+		  }
+
+		#wrap {
+			background: rgba(0, 0, 0, 0.5);
+		  	width: 100%;
+		  	
+		}
+
+		#main-menu {
+		  	
+		  	
+		  	width: 100%;
+		  	text-align: center;
+		  	
+		  	
+		  }
+
+		  #main-menu span {
+		  	list-style: none;
+		  	display: inline-block;	
+		  	
+		  	
+		  }
+
+		 	span a{ 
+		  	text-decoration: none; /* убираем подчеркивание ссылки */
+		    display: block; /* делаем ссылки блочными */
+		    padding: 20px 20px;
+		    color: white;
+		    font: 20px 'Ultra', Arial, serif;
+		   
+		   }
+
+			a:hover { color: rgb(255, 153, 0);}
+
+ .line {
+ 	background: white;
+ 	height: 2px;
+ }
+
+	/* picture slader*/
+ #pictures {
+ 	position: absolute;
+ 	top:0px;
+ 	z-index: -1;
+ 	width: 100%;
+
+ }
+
+ 
+ #logo {
+ 	width: 35%;
+ }
+
+ #lowline {
+ 	
+ 	position: absolute;
+ 	bottom: 0px;
+ 	background: rgba(0, 0, 0, 0.5);
+ 	height: 10%;
+ 	
+ }
+ #wrap3 {
+
+
+
+
+ }
+   </style>
+
+ </head>
+ <body>
+
+
+
+<div id = "wrap">
+ <div id="main-menu">
+ 	<span><a href="#">Ementa</a></span>
+ 	<span><a href="#">Bebidas</a></span>
+ 	<span><a href="#">Apple House</a></span>
+ 	<span><a href="#">Eventos</a></span>
+ 	<span id="last"><a href="#">Contactos</a></span>
+ </div>
+</div>
+<div class = "line">
+</div>
+
+<img id = "logo" src = "logo.png">
+
+<!-- picture slader -->
+
+<div id = "wrap2">
+	 <div id="pictures">
+	
+	 	
+	 </div>
+
+</div>
+
+<div id="wrap3">
+ <div id="lowline">
+     </div> 
+</div>
+
+				 <script type="text/javascript">
+				 //изменение фото
+				 console.log ('dsjkgf');
+
+				    var z = window.innerHeight;
+					var i = 1;
+					var imax = 8;
+
+					var nimg = document.createElement('img');
+					nimg.src = "1.jpg";
+					nimg.style.width = "100%";
+					document.getElementById("pictures").appendChild(nimg);
+
+					setInterval(function(){ setPic() }, 1700);
+					function setPic() {
+						i = i+1;
+						if (i==imax) { i=1};
+						var l = i +".jpg";
+						nimg.src = l;
+						nimg.style.width = "100%";
+					};
+
+				   //установить высоту wrap 
+				   //hwrap = z*0.9;
+				   //var wrap2 = document.createElement('wrap2');
+				   //wrap2.style.top = hwrap + "px";
+				  		  
+				 </script>
+
+ 
+ <script type="text/javascript">
+
+ // Тут я хотела сделать полосу черную внизу экрана, но не работает.
+
+ 	//lin = document.getElementById("lowline");
+ 	//h = z*0.1;
+ 	//t = t*0.9;
+ 	//lin.style.height = h + "px";
+ 	//lin.style.background = "black";
+ 	//lin.style.position = absolute;
+ 	//lin.style.top = t + "px";
+
+ </script>
+
+ 
+ </body>
+	
+</html>
